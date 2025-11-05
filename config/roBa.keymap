@@ -39,139 +39,188 @@
     combos {
         compatible = "zmk,combos";
 
+        // カッコ自動補完コンボ（右手ホーム 隣接キー）
+        // キー位置: H=15, T=16, N=17, S=18, K=19
+        combo_paren {
+            bindings = <&paren_pair>;
+            key-positions = <16 17>;  // T + N
+            timeout-ms = <50>;
+        };
+
+        combo_brace {
+            bindings = <&brace_pair>;
+            key-positions = <17 18>;  // N + S
+            timeout-ms = <50>;
+        };
+
+        combo_bracket_jp {
+            bindings = <&bracket_jp>;
+            key-positions = <18 19>;  // S + K
+            timeout-ms = <50>;
+        };
+
+        // 記号コンボ（新配列に対応）
+        // 左手上段: Q=0, W=1, D=2, R=3, F=4
+        // 左手ホーム: A=10, E=11, I=12, O=13, U=14
+        // 左手下段: Z=22, X=23, C=24, V=25, B=26
+        // 右手上段: J=5, L=6, P=7, Y=8, ;=9
+        // 右手ホーム: H=15, T=16, N=17, S=18, K=19, -=20
+        // 右手下段: M=27, G=28, MB1=29, MB2=30, /=32
+
         quote {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <5 17>;
+            key-positions = <4 15>;  // F + H
         };
 
         double_quote {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <17 29>;
+            key-positions = <15 27>;  // H + M
         };
 
         semicolon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <6 18>;
+            key-positions = <8 18>;  // Y + S
             timeout-ms = <20>;
         };
 
         colon {
             bindings = <&kp COLON>;
-            key-positions = <18 30>;
+            key-positions = <9 19>;  // ; + K
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <7 19>;
+            key-positions = <6 17>;  // L + N
             timeout-ms = <20>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <19 31>;
+            key-positions = <17 28>;  // N + G
         };
 
         tilde {
             bindings = <&kp TILDE>;
-            key-positions = <4 14>;
+            key-positions = <3 15>;  // R + H
         };
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <14 26>;
+            key-positions = <3 4>;  // R + F
         };
 
         underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <3 13>;
+            key-positions = <2 14>;  // D + U
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <13 25>;
+            key-positions = <14 26>;  // U + B
         };
 
         lt {
             bindings = <&kp LESS_THAN>;
-            key-positions = <2 12>;
+            key-positions = <1 13>;  // W + O
         };
 
         gt {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <24 12>;
+            key-positions = <13 25>;  // O + V
         };
 
         exclamation {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <1 11>;
+            key-positions = <0 10>;  // Q + A
         };
 
         question {
             bindings = <&kp QUESTION>;
-            key-positions = <11 23>;
+            key-positions = <10 22>;  // A + Z
         };
 
         percent {
             bindings = <&kp PERCENT>;
-            key-positions = <1 3>;
+            key-positions = <0 2>;  // Q + D
         };
 
         dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <13 11>;
+            key-positions = <12 10>;  // I + A
         };
 
         hash {
             bindings = <&kp HASH>;
-            key-positions = <23 25>;
+            key-positions = <22 24>;  // Z + C
         };
 
         lpar {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <12 13>;
+            key-positions = <11 12>;  // E + I
         };
 
         rpar {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <18 19>;
+            key-positions = <18 19>;  // S + K
         };
 
         lbkt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <3 2>;
+            key-positions = <1 2>;  // W + D
             timeout-ms = <20>;
         };
 
         rbkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <6 7>;
+            key-positions = <6 7>;  // L + P
             timeout-ms = <20>;
         };
 
         lbrc {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <25 24>;
+            key-positions = <23 24>;  // X + C
         };
 
         rbrc {
             bindings = <&kp RBRC>;
-            key-positions = <30 31>;
+            key-positions = <28 27>;  // G + M
         };
 
         caret {
             bindings = <&kp CARET>;
-            key-positions = <27 26>;
+            key-positions = <25 26>;  // V + B
         };
 
         amps {
             bindings = <&kp AMPERSAND>;
-            key-positions = <0 10>;
+            key-positions = <0 1>;  // Q + W
             timeout-ms = <20>;
         };
 
         asterisk {
             bindings = <&kp ASTERISK>;
-            key-positions = <10 22>;
+            key-positions = <8 9>;  // Y + ;
+        };
+
+        // プログラミング用記号コンボ
+        arrow {
+            bindings = <&arrow_macro>;
+            key-positions = <19 20>;  // K + -
+        };
+
+        fat_arrow {
+            bindings = <&fat_arrow_macro>;
+            key-positions = <18 20>;  // S + -
+        };
+
+        not_equal {
+            bindings = <&not_equal_macro>;
+            key-positions = <16 19>;  // T + K
+        };
+
+        equal_equal {
+            bindings = <&equal_equal_macro>;
+            key-positions = <15 18>;  // H + S
         };
     };
 
@@ -181,6 +230,57 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        // カッコ自動補完マクロ
+        paren_pair: paren_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PAREN_PAIR";
+        };
+
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "BRACE_PAIR";
+        };
+
+        bracket_jp: bracket_jp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LBKT) &kp LS(RBKT) &kp LEFT>;
+            label = "BRACKET_JP";
+        };
+
+        // プログラミング用記号マクロ
+        arrow_macro: arrow_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "ARROW";
+        };
+
+        fat_arrow_macro: fat_arrow_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "FAT_ARROW";
+        };
+
+        not_equal_macro: not_equal_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+            label = "NOT_EQUAL";
+        };
+
+        equal_equal_macro: equal_equal_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL>;
+            label = "EQUAL_EQUAL";
         };
     };
 
@@ -218,69 +318,72 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // Layer 0: ベースレイヤー（Tomisuke風配列）
+        // Q  W  D  R  F                     J  L  P  Y  ;
+        // A  E  I  O  U  [MB3]    [DEL] H  T  N  S  K  -
+        // Z  X  C  V  B  [@]      [+]   M  G  [MB1] [MB2] /
         default_layer {
             bindings = <
-&kp Q                       &kp W             &kp E            &kp R                   &kp T                                                    &kp Y        &kp U  &kp I     &kp O     &kp P
-&mt LCTRL A                 &kp S             &kp D            &kp F                   &kp G             &mkp MB3                &kp DELETE     &kp H        &kp J  &kp K     &lt 5 L   &lt 3 MINUS
-&kp Z                       &kp X             &kp C            &kp V                   &kp B             &kp AT_SIGN             &lt 4 PLUS     &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
-&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &lt_hold 1 SPACE  &mt LEFT_SHIFT TAB      &kp BACKSPACE  &lt 2 ENTER                             &mt LS(LEFT_COMMAND) PERIOD
+&kp Q                       &kp W             &kp D            &kp R                   &kp F                                                    &kp J        &kp L  &kp P     &kp Y       &kp SEMI
+&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &kp DELETE     &kp H        &kp T  &kp N     &lt 5 S     &lt 3 K
+&kp Z                       &kp X             &kp C            &kp V                   &kp B             &kp AT_SIGN             &lt 4 PLUS     &kp M        &kp G  &mkp MB1  &mkp MB2    &lt 1 MINUS
+&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &lt_hold 1 SPACE  &mt LEFT_SHIFT TAB      &kp BACKSPACE  &lt 2 ENTER                              &mt LS(LEFT_COMMAND) PERIOD
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
+        // Layer 1: 数字 + ナビゲーション
         layer_1 {
             bindings = <
-&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                                &trans  &trans          &trans          &trans           &trans
-&trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LG(NUMBER_0)      &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans                &trans  &trans  &trans          &kp DOWN_ARROW  &trans           &trans
-&trans  &trans        &kp N0        &trans        &trans  &trans                &trans  &trans                                                   &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
+&trans        &trans        &trans        &trans        &trans        &kp LG(NUMBER_0)      &trans  &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp MINUS
+&trans        &trans        &trans        &trans        &trans        &trans                &trans  &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP     &kp END          &trans
+&trans        &trans        &trans        &trans        &trans        &trans                &trans  &trans                                                         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
+        // Layer 2: ファンクションキー + VSCodeショートカット
         layer_2 {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                            &kp HOME       &kp END               &kp PAGE_UP         &kp PAGE_DOWN          &trans
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans           &trans  &kp LA(LG(H))  &kp LC(LEFT_ARROW)    &kp LC(UP_ARROW)    &kp LC(RIGHT_ARROW)    &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                            &kp LC(P)      &kp LC(LS(P))      &kp LC(B)           &kp LC(GRAVE)       &trans
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans           &trans  &kp LA(LG(H))  &kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)    &kp LC(RIGHT_ARROW)  &trans
 &kp F11  &kp F12  &trans  &trans  &trans   &trans           &trans  &kp LA(LG(L))  &kp LG(LEFT_BRACKET)  &kp LC(DOWN_ARROW)  &kp LG(RIGHT_BRACKET)  &trans
-&trans   &trans   &trans  &trans  &trans   &kp LS(TAB)      &trans  &trans                                                                          &trans
+&trans   &trans   &trans  &trans  &trans   &kp LS(TAB)      &trans  &trans                                                                        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
+        // Layer 3: ターミナル/システムショートカット
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans           &trans       &kp LS(LA(F))             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LS(LC(LG(NUMBER_4)))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans           &kp LG(W)    &trans                    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                          &trans
+&kp LC(C)  &kp LC(Z)  &kp LC(D)  &kp LC(L)  &trans                      &trans  &trans           &trans       &kp LS(LA(F))             &trans
+&trans     &trans     &trans     &trans     &trans  &trans      &trans  &trans  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LS(LC(LG(NUMBER_4)))  &trans
+&trans     &trans     &trans     &trans     &trans  &trans      &trans  &trans  &trans           &kp LG(W)    &trans                    &trans
+&trans     &trans     &trans     &trans     &trans  &trans      &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB)>;
         };
 
+        // Layer 4: Bluetooth設定 + OS切り替え
+        // Bluetoothプロファイル0-4を使い分けることで、異なるOSに接続できます
+        // 例: プロファイル0=Windows、プロファイル1=Mac など
+        // OSごとに異なる修飾キーマッピングが必要な場合は、レイヤー2-3で対応
         layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans          &trans          &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &bt BT_CLR      &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT    
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                      &trans
             >;
         };
 
+        // Layer 5: スクロール（トラックボール用）
         layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
