@@ -3,26 +3,26 @@ layers:
   default:
   - Q
   - W
-  - E
+  - D
   - R
-  - T
+  - F
+  - J
+  - L
+  - P
   - Y
-  - U
+  - ;
+  - {t: A, h: ^}
+  - E
   - I
   - O
-  - P
-  - {t: A, h: ^}
-  - S
-  - D
-  - F
-  - G
+  - U
   - '&mkp MB3'
   - ⌦
   - H
-  - J
-  - K
-  - {t: L, h: '5'}
-  - {t: '-', h: '3'}
+  - T
+  - N
+  - {t: S, h: '5'}
+  - {t: K, h: '3'}
   - Z
   - X
   - C
@@ -30,11 +30,11 @@ layers:
   - B
   - '@'
   - {t: +, h: '4'}
-  - N
   - M
+  - G
   - '&mkp MB1'
   - '&mkp MB2'
-  - {t: /, h: '1'}
+  - {t: '-', h: '1'}
   - {t: ',', h: ^⌘}
   - {t: ⎋, h: ⌥}
   - {t: LANG2, h: ^}
@@ -45,43 +45,43 @@ layers:
   - {t: ↵, h: '2'}
   - {t: ., h: ⇧⌘}
   '1':
-  - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
-  - {t: ▽, type: trans}
-  - ⌘0
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ←
-  - ↑
-  - →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ↓
+  - ⌘0
   - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PAGE DOWN
+  - PAGE UP
+  - END
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held alternate}
   - {t: ▽, type: trans}
@@ -94,10 +94,10 @@ layers:
   - F3
   - F4
   - F5
-  - HOME
-  - END
-  - PAGE UP
-  - PAGE DOWN
+  - ^P
+  - ^⇧P
+  - ^B
+  - ^`
   - {t: ▽, type: trans}
   - F6
   - F7
@@ -133,10 +133,10 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   '3':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ^C
+  - ^Z
+  - ^D
+  - ^L
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -264,100 +264,70 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '6':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
-- p: [5, 17]
+- p: [16, 17]
+  k: '&paren_pair'
+- p: [17, 18]
+  k: '&brace_pair'
+- p: [18, 19]
+  k: '&bracket_jp'
+- p: [4, 15]
   k: ''''
-- p: [17, 29]
+- p: [15, 27]
   k: '"'
-- p: [6, 18]
+- p: [8, 18]
   k: ;
-- p: [18, 30]
+- p: [9, 19]
   k: ':'
-- p: [7, 19]
+- p: [6, 17]
   k: '|'
-- p: [19, 31]
+- p: [17, 28]
   k: \
-- p: [4, 14]
+- p: [3, 15]
   k: '~'
-- p: [14, 26]
+- p: [3, 4]
   k: '`'
-- p: [3, 13]
+- p: [2, 14]
   k: _
-- p: [13, 25]
+- p: [14, 26]
   k: '='
-- p: [2, 12]
+- p: [1, 13]
   k: <
-- p: [24, 12]
+- p: [13, 25]
   k: '>'
-- p: [1, 11]
+- p: [0, 10]
   k: '!'
-- p: [11, 23]
+- p: [10, 22]
   k: '?'
-- p: [1, 3]
+- p: [0, 2]
   k: '%'
-- p: [13, 11]
+- p: [12, 10]
   k: $
-- p: [23, 25]
+- p: [22, 24]
   k: '#'
-- p: [12, 13]
+- p: [11, 12]
   k: (
 - p: [18, 19]
   k: )
-- p: [3, 2]
+- p: [1, 2]
   k: '['
 - p: [6, 7]
   k: ']'
-- p: [25, 24]
+- p: [23, 24]
   k: '{'
-- p: [30, 31]
+- p: [28, 27]
   k: '}'
-- p: [27, 26]
+- p: [25, 26]
   k: ^
-- p: [0, 10]
+- p: [0, 1]
   k: '&'
-- p: [10, 22]
+- p: [8, 9]
   k: '*'
+- p: [19, 20]
+  k: '&arrow_macro'
+- p: [18, 20]
+  k: '&fat_arrow_macro'
+- p: [16, 19]
+  k: '&not_equal_macro'
+- p: [15, 18]
+  k: '&equal_equal_macro'
