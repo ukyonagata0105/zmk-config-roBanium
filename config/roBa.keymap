@@ -183,6 +183,17 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
         };
+
+        // Backspace長押しでブラウザ戻る
+        bspc_back: bspc_back {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BSPC_BACK";
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&mkp>, <&kp>;
+            #binding-cells = <2>;
+        };
     };
 
     keymap {
@@ -190,14 +201,14 @@
 
         // Layer 0: ベースレイヤー（Tomisuke風配列）
         // Q  W  D  R  F                         J  L  P  Y  ;
-        // A  E  I  O  U  [MB3]    [BSPC]    H  T  N  S  K  -
-        // Z  X  C  V  B  [@]      [+]       M  G  [MB1] [MB2] /
+        // A  E  I  O  U  [MB3]    [BSPC/MB4]  H  T  N  S  K  -
+        // Z  X  C  V  B  [@]      [+]          M  G  [MB1] [MB2] /
         default_layer {
             bindings = <
-&kp Q                       &kp W             &kp D            &kp R                   &kp F                                                      &kp J           &kp L  &kp P     &kp Y       &kp SEMI
-&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &kp BACKSPACE  &kp H           &kp T  &kp N     &lt 5 S     &lt 3 K
-&kp Z                       &kp X             &kp C            &kp V                   &kp B             &kp AT_SIGN             &lt 4 PLUS     &kp M           &kp G  &mkp MB1  &mkp MB2    &lt 1 MINUS
-&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &lt_hold 1 SPACE  &mt LEFT_SHIFT TAB      &kp LC(UP)     &lt 2 ENTER                                 &mt LS(LEFT_COMMAND) PERIOD
+&kp Q                       &kp W             &kp D            &kp R                   &kp F                                                             &kp J           &kp L  &kp P     &kp Y       &kp SEMI
+&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &bspc_back MB4 BACKSPACE  &kp H           &kp T  &kp N     &lt 5 S     &lt 3 K
+&kp Z                       &kp X             &kp C            &kp V                   &kp B             &kp AT_SIGN             &lt 4 PLUS                &kp M           &kp G  &mkp MB1  &mkp MB2    &lt 1 MINUS
+&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &lt_hold 1 SPACE  &mt LEFT_SHIFT TAB      &kp LC(UP)                &lt 2 ENTER                                 &mt LS(LEFT_COMMAND) PERIOD
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
