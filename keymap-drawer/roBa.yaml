@@ -61,7 +61,7 @@ layers:
   - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - \
   - {t: '4', h: $}
   - {t: '5', h: '%'}
   - {t: '6', h: ^}
@@ -78,7 +78,7 @@ layers:
   - {t: '8', h: '*'}
   - {t: '9', h: (}
   - '-'
-  - {t: \, type: held}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
