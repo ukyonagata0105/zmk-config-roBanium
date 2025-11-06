@@ -50,9 +50,9 @@ layers:
   - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
+  - {t: '1', h: '!'}
+  - {t: '2', h: '@'}
+  - {t: '3', h: '#'}
   - /
   - ⇧'
   - {t: ▽, type: trans}
@@ -62,9 +62,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
+  - {t: '4', h: $}
+  - {t: '5', h: '%'}
+  - {t: '6', h: ^}
   - '*'
   - ':'
   - {t: ▽, type: trans}
@@ -74,9 +74,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
+  - {t: '7', h: '&'}
+  - {t: '8', h: '*'}
+  - {t: '9', h: (}
   - '-'
   - {t: \, type: held}
   - {t: ▽, type: trans}
@@ -86,7 +86,7 @@ layers:
   - {type: held alternate}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
+  - {t: '0', h: )}
   - .
   '2':
   - F1
