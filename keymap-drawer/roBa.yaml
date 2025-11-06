@@ -10,7 +10,7 @@ layers:
   - L
   - P
   - Y
-  - ;
+  - {t: ;, h: '4'}
   - {t: A, h: ^}
   - E
   - I
@@ -21,12 +21,12 @@ layers:
   - H
   - T
   - N
-  - {t: S, h: '5'}
+  - S
   - {t: K, h: '3'}
-  - Z
-  - X
-  - C
-  - V
+  - {t: Z, h: '1'}
+  - {t: X, h: '2'}
+  - {t: C, h: '3'}
+  - {t: V, h: '4'}
   - B
   - '@'
   - {t: +, h: '4'}
@@ -34,16 +34,16 @@ layers:
   - G
   - '&mkp MB1'
   - '&mkp MB2'
-  - {t: '-', h: '1'}
+  - {t: /, h: '2'}
   - {t: ',', h: ^⌘}
   - {t: ⎋, h: ⌥}
   - {t: LANG2, h: ^}
   - {t: LANG1, h: ⌘}
-  - {t: ␣, h: '1'}
+  - ␣
   - {t: ⇥, h: ⇧}
   - ^UP
   - {t: ↵, h: '2'}
-  - {t: ., h: ⇧⌘}
+  - {t: ., h: '1'}
   '1':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,7 +67,7 @@ layers:
   - {t: '6', h: ^}
   - '*'
   - ':'
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -78,16 +78,16 @@ layers:
   - {t: '8', h: '*'}
   - {t: '9', h: (}
   - '-'
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held alternate}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '0', h: )}
-  - .
+  - {t: ., type: held alternate}
   '2':
   - F1
   - F2
@@ -112,7 +112,7 @@ layers:
   - ^→
   - {t: ▽, type: trans}
   - F11
-  - F12
+  - {t: F12, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -122,7 +122,7 @@ layers:
   - ⌘[
   - ^↓
   - ⌘]
-  - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,7 +130,7 @@ layers:
   - {t: ▽, type: trans}
   - ⇤
   - {t: ▽, type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   '3':
   - ^C
@@ -157,7 +157,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -186,7 +186,7 @@ layers:
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - {t: BT, h: '4', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -202,10 +202,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - BT CLR
   - BT CLR ALL
@@ -241,7 +241,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
