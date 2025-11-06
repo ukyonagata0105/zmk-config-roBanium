@@ -18,9 +18,9 @@
 };
 
 &trackball {
-    // automouse-layer = <4>;
-
-    scroll-layers = <5>;
+    // オートマウスレイヤー（AML）を使用するため、scroll-layersは無効化
+    // AMLの設定はroBa_R.overlayで行っています
+    // scroll-layers = <5>;
 
     // arrows {
     //     layers = <3>;
@@ -59,148 +59,7 @@
             timeout-ms = <50>;
         };
 
-        // 記号コンボ（新配列に対応）
-        // 左手上段: Q=0, W=1, D=2, R=3, F=4
-        // 左手ホーム: A=10, E=11, I=12, O=13, U=14
-        // 左手下段: Z=22, X=23, C=24, V=25, B=26
-        // 右手上段: J=5, L=6, P=7, Y=8, ;=9
-        // 右手ホーム: H=15, T=16, N=17, S=18, K=19, -=20
-        // 右手下段: M=27, G=28, MB1=29, MB2=30, /=32
-
-        quote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <4 15>;  // F + H
-        };
-
-        double_quote {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <15 27>;  // H + M
-        };
-
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <8 18>;  // Y + S
-            timeout-ms = <20>;
-        };
-
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <9 19>;  // ; + K
-        };
-
-        pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <6 17>;  // L + N
-            timeout-ms = <20>;
-        };
-
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <17 28>;  // N + G
-        };
-
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <3 15>;  // R + H
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <3 4>;  // R + F
-        };
-
-        underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <2 14>;  // D + U
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <14 26>;  // U + B
-        };
-
-        lt {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <1 13>;  // W + O
-        };
-
-        gt {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <13 25>;  // O + V
-        };
-
-        exclamation {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <0 10>;  // Q + A
-        };
-
-        question {
-            bindings = <&kp QUESTION>;
-            key-positions = <10 22>;  // A + Z
-        };
-
-        percent {
-            bindings = <&kp PERCENT>;
-            key-positions = <0 2>;  // Q + D
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <12 10>;  // I + A
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <22 24>;  // Z + C
-        };
-
-        lpar {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <11 12>;  // E + I
-        };
-
-        rpar {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <18 19>;  // S + K
-        };
-
-        lbkt {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <1 2>;  // W + D
-            timeout-ms = <20>;
-        };
-
-        rbkt {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <6 7>;  // L + P
-            timeout-ms = <20>;
-        };
-
-        lbrc {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <23 24>;  // X + C
-        };
-
-        rbrc {
-            bindings = <&kp RBRC>;
-            key-positions = <28 27>;  // G + M
-        };
-
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <25 26>;  // V + B
-        };
-
-        amps {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <0 1>;  // Q + W
-            timeout-ms = <20>;
-        };
-
-        asterisk {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 9>;  // Y + ;
-        };
+        // 記号はLayer 1に移行（コンボは削除）
 
         // プログラミング用記号コンボ
         arrow {
@@ -319,27 +178,28 @@
         compatible = "zmk,keymap";
 
         // Layer 0: ベースレイヤー（Tomisuke風配列）
-        // Q  W  D  R  F                     J  L  P  Y  ;
-        // A  E  I  O  U  [MB3]    [DEL] H  T  N  S  K  -
-        // Z  X  C  V  B  [@]      [+]   M  G  [MB1] [MB2] /
+        // Q  W  D  R  F                         J  L  P  Y  ;
+        // A  E  I  O  U  [MB3]    [BSPC]    H  T  N  S  K  -
+        // Z  X  C  V  B  [@]      [+]       M  G  [MB1] [MB2] /
         default_layer {
             bindings = <
-&kp Q                       &kp W             &kp D            &kp R                   &kp F                                                    &kp J        &kp L  &kp P     &kp Y       &kp SEMI
-&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &kp DELETE     &kp H        &kp T  &kp N     &lt 5 S     &lt 3 K
-&kp Z                       &kp X             &kp C            &kp V                   &kp B             &kp AT_SIGN             &lt 4 PLUS     &kp M        &kp G  &mkp MB1  &mkp MB2    &lt 1 MINUS
-&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &lt_hold 1 SPACE  &mt LEFT_SHIFT TAB      &kp BACKSPACE  &lt 2 ENTER                              &mt LS(LEFT_COMMAND) PERIOD
+&kp Q                       &kp W             &kp D            &kp R                   &kp F                                                      &kp J           &kp L  &kp P     &kp Y       &kp SEMI
+&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &kp BACKSPACE  &kp H           &kp T  &kp N     &lt 5 S     &lt 3 K
+&kp Z                       &kp X             &kp C            &kp V                   &kp B             &kp AT_SIGN             &lt 4 PLUS     &kp M           &kp G  &mkp MB1  &mkp MB2    &lt 1 MINUS
+&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &lt_hold 1 SPACE  &mt LEFT_SHIFT TAB      &kp LC(UP)     &lt 2 ENTER                                 &mt LS(LEFT_COMMAND) PERIOD
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        // Layer 1: 数字 + ナビゲーション
+        // Layer 1: 矢印キー + テンキー + 記号
+        // 左側: 矢印キー配置、右側: テンキー + 記号
         layer_1 {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
-&trans        &trans        &trans        &trans        &trans        &kp LG(NUMBER_0)      &trans  &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp MINUS
-&trans        &trans        &trans        &trans        &trans        &trans                &trans  &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP     &kp END          &trans
-&trans        &trans        &trans        &trans        &trans        &trans                &trans  &trans                                                         &trans
+&trans        &trans        &kp UP        &trans        &trans                                &kp N7    &kp N8       &kp N9       &kp SLASH    &kp DQT
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans          &trans  &kp N4    &kp N5       &kp N6       &kp ASTRK    &kp COLON
+&trans        &trans        &trans        &trans        &trans        &trans          &trans  &kp N1    &kp N2       &kp N3       &kp MINUS    &kp BSLH
+&trans        &trans        &trans        &trans        &trans        &trans          &trans  &kp N0    &kp DOT      &kp EQUAL    &kp PLUS     &kp LT
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;

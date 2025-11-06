@@ -1,4 +1,5 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -14,11 +15,23 @@
             ;
 };
 
+// オートマウスレイヤー（AML）の設定
+// トラックボール使用時に自動でLayer 5（スクロールレイヤー）に切り替え
+// タイムアウト: 10秒（10000ms）
+&zip_temp_layer {
+    // マウスボタン以外のキーを押したらAML解除
+    // MB1=29, MB2=30, MB3=16（左手親指エリアのMB3）
+    excluded-positions = <29 30 16>;
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        
+        // トラボ使用後10秒間、Layer 5を有効化
+        input-processors = <&zip_temp_layer 5 10000>;
     };
 };
 
