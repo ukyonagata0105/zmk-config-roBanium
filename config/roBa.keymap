@@ -220,8 +220,8 @@
         layer_1 {
             bindings = <
 &trans        &trans        &kp UP        &trans        &trans                                          &num_sym EXCL N1      &num_sym AT N2       &num_sym HASH N3     &kp SLASH       &kp LS(SQT)
-&trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans          &trans            &num_sym DOLLAR N4    &num_sym PERCENT N5  &num_sym CARET N6    &kp ASTERISK    &kp COLON
-&trans        &trans        &trans        &trans        &trans        &trans          &trans            &num_sym AMPS N7      &num_sym ASTERISK N8 &num_sym LPAR N9     &kp MINUS       &kp BACKSLASH
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans          &kp BACKSLASH     &num_sym DOLLAR N4    &num_sym PERCENT N5  &num_sym CARET N6    &kp ASTERISK    &kp COLON
+&trans        &trans        &trans        &trans        &trans        &trans          &trans            &num_sym AMPS N7      &num_sym ASTERISK N8 &num_sym LPAR N9     &kp MINUS       &trans
 &trans        &trans        &trans        &trans        &trans        &trans          &trans            &num_sym RPAR N0                                                                   &kp DOT
             >;
 
