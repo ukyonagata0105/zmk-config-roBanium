@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors/rgbled_widget.dtsi>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
@@ -258,12 +259,13 @@
         // Bluetoothプロファイル0-4を使い分けることで、異なるOSに接続できます
         // 例: プロファイル0=Windows、プロファイル1=Mac など
         // OSごとに異なる修飾キーマッピングが必要な場合は、レイヤー2-3で対応
+        // &ind_bat: バッテリー残量確認（LED: 緑80%以上、黄20-79%、赤1-19%）
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans          &trans          &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &bt BT_CLR      &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT    
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                      &trans
+&trans    &trans  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
+&ind_bat  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans          &trans          &trans        &trans
+&trans    &trans  &trans  &trans  &trans  &trans      &trans  &trans        &bt BT_CLR      &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT    
+&trans    &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                      &trans
             >;
         };
 
