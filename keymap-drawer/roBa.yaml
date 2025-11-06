@@ -17,7 +17,7 @@ layers:
   - O
   - U
   - '&mkp MB3'
-  - ⌫
+  - {t: ⌫, h: '&mkp MB4'}
   - H
   - T
   - N
