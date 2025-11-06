@@ -200,16 +200,16 @@
         compatible = "zmk,keymap";
 
         // Layer 0: ベースレイヤー（Tomisuke風配列）
-        // レイヤー切り替え: 左手下段(Z/X/C/V)と右手右列(./−/;)で Layer 1/2/3/4
+        // レイヤー切り替え: 左手下段(Z/X/C/V)と右手右列(./K///;)で Layer 1/2/3/4
         // Q  W  D  R  F                         J  L  P  Y  ;/L4
-        // A  E  I  O  U  [MB3]    [BSPC/MB4]  H  T  N  S  K  -/L3
+        // A  E  I  O  U  [MB3]    [BSPC/MB4]  H  T  N  S  K/L3
         // Z/L1 X/L2 C/L3 V/L4 B  [@]  [+]     M  G  [MB1] [MB2] //L2
         default_layer {
             bindings = <
 &kp Q                       &kp W             &kp D            &kp R                   &kp F                                                             &kp J           &kp L       &kp P     &kp Y            &lt 4 SEMI
-&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &bspc_back MB4 BACKSPACE  &kp H           &kp T       &kp N     &kp S            &kp K
+&mt LCTRL A                 &kp E             &kp I            &kp O                   &kp U             &mkp MB3                &bspc_back MB4 BACKSPACE  &kp H           &kp T       &kp N     &kp S            &lt 3 K
 &lt 1 Z                     &lt 2 X           &lt 3 C          &lt 4 V                 &kp B             &kp AT_SIGN             &lt 4 PLUS                &kp M           &kp G       &mkp MB1  &mkp MB2         &lt 2 SLASH
-&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &kp SPACE         &mt LEFT_SHIFT TAB      &kp LC(UP)                &lt 2 ENTER                           &lt 3 MINUS  &lt 1 DOT
+&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &kp SPACE         &mt LEFT_SHIFT TAB      &kp LC(UP)                &lt 2 ENTER                                        &lt 1 DOT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
