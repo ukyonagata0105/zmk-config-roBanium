@@ -203,17 +203,18 @@
 
         // Layer 0: ベースレイヤー（五十音順配列・最適化版）
         // レイヤー切り替え: 左手下段(Z/X/C/V)=L1/2/3/4、右手右列(L/H/P/.)=L1/2/3/4（上から）
-        // 左手: 母音（A I U E O）+ 使用頻度低い子音（上段）+ 右下にマウスボタン
+        // 左手: 母音（A I U E O）+ 使用頻度低い子音（上段）+ 親指エリアにマウスボタン
         // 右手: 使用頻度高い子音（ま や ら わ / か さ た な は / 濁音・半濁音）
-        // Q  W  F  V  J                           M  Y  R  W  L/L1
-        // A  I  U  E  O  [@]    [BSPC]           K  S  T  N  H/L2
-        // Z/L1 X/L2 C/L3 V/L4 B  [MB1]  [MB2]    G  Z  D  B  P/L3
+        // Q  W  F  V  J                              M  Y  R  W  L/L1
+        // A  I  U  E  O  [MB3]    [BSPC]            K  S  T  N  H/L2
+        // Z/L1 X/L2 C/L3 V/L4 B  [@]  [G]           G  Z  D  B  P/L3
+        // ,/Ctrl+Cmd ESC/Alt LANG2/Ctrl LANG1/Cmd [MB2] [MB1]  [SPACE]  Enter/L2  ./Ctrl+Up
         default_layer {
             bindings = <
 &kp Q                       &kp W             &kp F            &kp V                   &kp J                                                 &kp M           &kp Y       &kp R     &kp W            &lt 1 L
-&kp A                       &kp I             &kp U            &kp E                   &kp O             &kp AT_SIGN     &kp BACKSPACE       &kp K           &kp S       &kp T     &kp N            &lt 2 H
-&lt 1 Z                     &lt 2 X           &lt 3 C          &lt 4 V                 &kp B             &mkp MB1        &mkp MB2            &kp G           &kp Z       &kp D     &kp B            &lt 3 P
-&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &kp SPACE         &mt LEFT_SHIFT TAB      &kp LC(UP)      &lt 2 ENTER                                        &mt LC(UP) DOT
+&kp A                       &kp I             &kp U            &kp E                   &kp O             &mkp MB3        &kp BACKSPACE       &kp K           &kp S       &kp T     &kp N            &lt 2 H
+&lt 1 Z                     &lt 2 X           &lt 3 C          &lt 4 V                 &kp B             &kp AT_SIGN     &lt 4 G             &kp G           &kp Z       &kp D     &kp B            &lt 3 P
+&mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &mkp MB2          &mkp MB1        &kp SPACE           &lt 2 ENTER                                        &mt LC(UP) DOT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
