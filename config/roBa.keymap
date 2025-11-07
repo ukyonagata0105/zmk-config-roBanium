@@ -207,13 +207,13 @@
         // 右手: 使用頻度高い子音（ま や ら わ / か さ た な は / 濁音・半濁音）
         // Q  W  F  V  J                              M  Y  R  W  L/L1
         // A  I  U  E  O  [MB3]    [BSPC]            K  S  T  N  H/L2
-        // Z/L1 X/L2 C/L3 V/L4 B  [@]  [G]           G  Z  D  B  P/L3
+        // Z/L1 X/L2 C/L3 V/L4 B  [@]  [TAB/L4]      G  Z  D  B  P/L3
         // ,/Ctrl+Cmd ESC/Alt LANG2/Ctrl LANG1/Cmd [MB2] [MB1]  [SPACE]  Enter/L2  ./Ctrl+Up
         default_layer {
             bindings = <
 &kp Q                       &kp W             &kp F            &kp V                   &kp J                                                 &kp M           &kp Y       &kp R     &kp W            &lt 1 L
 &kp A                       &kp I             &kp U            &kp E                   &kp O             &mkp MB3        &kp BACKSPACE       &kp K           &kp S       &kp T     &kp N            &lt 2 H
-&lt 1 Z                     &lt 2 X           &lt 3 C          &lt 4 V                 &kp B             &kp AT_SIGN     &lt 4 G             &kp G           &kp Z       &kp D     &kp B            &lt 3 P
+&lt 1 Z                     &lt 2 X           &lt 3 C          &lt 4 V                 &kp B             &kp AT_SIGN     &lt 4 TAB           &kp G           &kp Z       &kp D     &kp B            &lt 3 P
 &mt LC(LEFT_COMMAND) COMMA  &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &mkp MB2          &mkp MB1        &kp SPACE           &lt 2 ENTER                                        &mt LC(UP) DOT
             >;
 
