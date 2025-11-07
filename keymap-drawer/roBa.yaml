@@ -16,7 +16,7 @@ layers:
   - U
   - E
   - O
-  - '@'
+  - '&mkp MB3'
   - ⌫
   - K
   - S
@@ -28,8 +28,8 @@ layers:
   - {t: C, h: '3'}
   - {t: V, h: '4'}
   - B
-  - '&mkp MB1'
-  - '&mkp MB2'
+  - '@'
+  - {t: G, h: '4'}
   - G
   - Z
   - D
@@ -39,9 +39,9 @@ layers:
   - {t: ⎋, h: ⌥}
   - {t: LANG2, h: ^}
   - {t: LANG1, h: ⌘}
+  - '&mkp MB2'
+  - '&mkp MB1'
   - ␣
-  - {t: ⇥, h: ⇧}
-  - ^UP
   - {t: ↵, h: '2'}
   - {t: ., h: ^UP}
   '1':
@@ -205,7 +205,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - BT CLR
   - BT CLR ALL
