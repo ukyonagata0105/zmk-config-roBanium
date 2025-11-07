@@ -3,26 +3,26 @@ layers:
   default:
   - Q
   - W
-  - D
-  - R
   - F
-  - J
-  - L
-  - P
-  - Y
-  - {t: ;, h: '1'}
-  - A
-  - E
-  - I
-  - O
-  - U
-  - '&mkp MB3'
-  - {t: ⌫, h: '&mkp MB4'}
-  - H
+  - V
+  - X
+  - K
+  - S
   - T
   - N
-  - S
-  - {t: K, h: '2'}
+  - {t: H, h: '1'}
+  - A
+  - I
+  - U
+  - E
+  - O
+  - '&mkp MB3'
+  - {t: ⌫, h: '&mkp MB4'}
+  - M
+  - Y
+  - R
+  - W
+  - {t: L, h: '2'}
   - {t: Z, h: '1'}
   - {t: X, h: '2'}
   - {t: C, h: '3'}
@@ -30,11 +30,11 @@ layers:
   - B
   - '@'
   - {t: +, h: '4'}
-  - M
   - G
+  - Z
   - '&mkp MB1'
   - '&mkp MB2'
-  - {t: /, h: '3'}
+  - {t: P, h: '3'}
   - {t: ',', h: ^⌘}
   - {t: ⎋, h: ⌥}
   - {t: LANG2, h: ^}
