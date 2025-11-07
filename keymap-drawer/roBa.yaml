@@ -5,35 +5,35 @@ layers:
   - W
   - F
   - V
-  - X
-  - K
-  - S
-  - T
-  - N
-  - {t: H, h: '1'}
+  - J
+  - M
+  - Y
+  - R
+  - W
+  - {t: L, h: '1'}
   - A
   - I
   - U
   - E
   - O
-  - '&mkp MB3'
-  - {t: ⌫, h: '&mkp MB4'}
-  - M
-  - Y
-  - R
-  - W
-  - {t: L, h: '2'}
+  - '&mkp MB1'
+  - {t: ⌫, h: '&mkp MB2'}
+  - K
+  - S
+  - T
+  - N
+  - {t: H, h: '2'}
   - {t: Z, h: '1'}
   - {t: X, h: '2'}
   - {t: C, h: '3'}
   - {t: V, h: '4'}
   - B
   - '@'
-  - {t: +, h: '4'}
+  - {t: G, h: '4'}
   - G
   - Z
-  - '&mkp MB1'
-  - '&mkp MB2'
+  - D
+  - B
   - {t: P, h: '3'}
   - {t: ',', h: ^⌘}
   - {t: ⎋, h: ⌥}
