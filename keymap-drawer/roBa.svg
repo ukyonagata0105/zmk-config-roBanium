@@ -271,10 +271,9 @@ svg.keymap { font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helveti
 </g>
 <g transform="translate(448, 168)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">⇥</text>
-<a href="#x_x">
-<text x="0" y="24" class="key hold layer-activator">4</text>
-</a></g>
+<text x="0" y="0" class="key tap">-</text>
+<text x="0" y="24" class="key hold">⇥</text>
+</g>
 <g transform="translate(504, 155)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">G</text>
@@ -1009,8 +1008,9 @@ svg.keymap { font-family: ui-sans-serif,-apple-system,system-ui,Segoe UI,Helveti
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(448, 168)" class="key held alternate keypos-28">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate"/>
+<g transform="translate(448, 168)" class="key trans keypos-28">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(504, 155)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>

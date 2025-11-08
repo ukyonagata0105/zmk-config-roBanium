@@ -29,7 +29,7 @@ layers:
   - Q
   - F
   - {t: J, h: '@'}
-  - {t: ⇥, h: '4'}
+  - {t: '-', h: ⇥}
   - G
   - Z
   - D
@@ -205,7 +205,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held alternate}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR
   - BT CLR ALL
