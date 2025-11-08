@@ -35,15 +35,15 @@ layers:
   - D
   - B
   - {t: P, h: '3'}
-  - ','
+  - {t: ',', h: ^}
   - {t: ⎋, h: ⌥}
-  - {t: LANG2, h: ^}
-  - {t: LANG1, h: ⌘}
+  - {t: LANG2, h: ⇧}
+  - LANG1
   - '&mkp MB2'
   - '&mkp MB1'
   - ␣
   - {t: ↵, h: '2'}
-  - {t: ., h: ^UP}
+  - {t: ., h: ','}
   '1':
   - {type: held}
   - {t: ▽, type: trans}
