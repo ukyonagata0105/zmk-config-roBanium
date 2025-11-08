@@ -1,11 +1,11 @@
 layout: {zmk_keyboard: roBa}
 layers:
   default:
-  - Q
-  - W
-  - F
-  - V
-  - J
+  - {t: F1, h: '1'}
+  - {t: F2, h: '2'}
+  - {t: F3, h: '3'}
+  - {t: F4, h: '4'}
+  - F5
   - M
   - Y
   - R
@@ -23,12 +23,12 @@ layers:
   - T
   - N
   - {t: H, h: '2'}
-  - {t: Z, h: '1'}
-  - {t: X, h: '2'}
-  - {t: C, h: '3'}
-  - {t: V, h: '4'}
-  - B
-  - '@'
+  - X
+  - C
+  - V
+  - Q
+  - F
+  - {t: J, h: '@'}
   - {t: ⇥, h: '4'}
   - G
   - Z
@@ -45,7 +45,7 @@ layers:
   - {t: ↵, h: '2'}
   - {t: ., h: ^UP}
   '1':
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - UP
   - {t: ▽, type: trans}
@@ -54,7 +54,7 @@ layers:
   - {t: '2', h: '@'}
   - {t: '3', h: '#'}
   - /
-  - {type: held}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - LEFT
   - DOWN
@@ -67,7 +67,7 @@ layers:
   - {t: '6', h: ^}
   - '*'
   - ':'
-  - {type: held alternate}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -90,7 +90,7 @@ layers:
   - '!'
   '2':
   - F1
-  - F2
+  - {t: F2, type: held}
   - F3
   - F4
   - F5
@@ -110,9 +110,9 @@ layers:
   - ^←
   - ^↑
   - ^→
-  - {type: held}
+  - {type: held alternate}
   - F11
-  - {t: F12, type: held alternate}
+  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -135,7 +135,7 @@ layers:
   '3':
   - ^C
   - ^Z
-  - ^D
+  - {t: ^D, type: held}
   - ^L
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -157,7 +157,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -180,7 +180,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -202,7 +202,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held alternate}
@@ -265,6 +265,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
+- p: [20, 21]
+  k: Z
 - p: [16, 17]
   k: '&paren_pair'
 - p: [17, 18]
