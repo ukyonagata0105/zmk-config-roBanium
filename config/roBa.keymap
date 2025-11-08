@@ -44,7 +44,7 @@
         // 左手コンボ: X + C = Z
         combo_z {
             bindings = <&kp Z>;
-            key-positions = <20 21>;  // X + C
+            key-positions = <22 23>;  // X + C (3行目の0番目と1番目)
             timeout-ms = <50>;
         };
 
