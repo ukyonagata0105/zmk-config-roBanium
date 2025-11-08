@@ -209,19 +209,19 @@
         compatible = "zmk,keymap";
 
         // Layer 0: ベースレイヤー（五十音順配列・最適化版）
-        // レイヤー切り替え: 左手下段(X/C/V/Q)=L1/2/3/4、右手右列(L/H/P/.)=L1/2/3/4（上から）
+        // レイヤー切り替え: 左手上段(F1-F4)=L1/2/3/4、右手右列(L/H/P/.)=L1/2/3/4（上から）
         // 左手: 母音（A I U E O）+ ファンクションキー（上段）+ 親指エリアにマウスボタン
         // 右手: 使用頻度高い子音（ま や ら わ / か さ た な は / 濁音・半濁音）
         // コンボ: X+C = Z
-        // F1 F2 F3 F4 F5                             M  Y  R  W  L/L1
-        // A  I  U  E  O  [MB3]    [BSPC]            K  S  T  N  H/L2
-        // X/L1 C/L2 V/L3 Q/L4 F J [@]  [TAB/L4]     G  Z  D  B  P/L3
+        // F1/L1 F2/L2 F3/L3 F4/L4 F5                  M  Y  R  W  L/L1
+        // A  I  U  E  O  [MB3]     [BSPC]            K  S  T  N  H/L2
+        // X C V Q F J [@]  [TAB/L4]                  G  Z  D  B  P/L3
         // , ESC/Alt LANG2/Ctrl LANG1/Cmd [MB2] [MB1]  [SPACE]  Enter/L2  ./Ctrl+Up
         default_layer {
             bindings = <
-&kp F1                      &kp F2            &kp F3           &kp F4                  &kp F5                                                &kp M           &kp Y       &kp R     &kp W            &lt 1 L
+&lt 1 F1                    &lt 2 F2          &lt 3 F3         &lt 4 F4                &kp F5                                                &kp M           &kp Y       &kp R     &kp W            &lt 1 L
 &kp A                       &kp I             &kp U            &kp E                   &kp O             &mkp MB3        &kp BACKSPACE       &kp K           &kp S       &kp T     &kp N            &lt 2 H
-&lt 1 X                     &lt 2 C           &lt 3 V          &lt 4 Q                 &kp F             &kp J           &kp AT_SIGN         &lt 4 TAB       &kp G       &kp Z     &kp D     &kp B  &lt 3 P
+&kp X                       &kp C             &kp V            &kp Q                   &kp F             &kp J           &kp AT_SIGN         &lt 4 TAB       &kp G       &kp Z     &kp D     &kp B  &lt 3 P
 &kp COMMA                   &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &mkp MB2          &mkp MB1        &kp SPACE           &lt 2 ENTER                                        &mt LC(UP) DOT
             >;
 
