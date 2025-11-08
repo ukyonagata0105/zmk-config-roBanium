@@ -164,6 +164,17 @@
             #binding-cells = <2>;
         };
 
+        // 伸ばし棒長押しでTAB
+        tab_minus: tab_minus {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAB_MINUS";
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+        };
+
         lt_hold: lt_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_HOLD";
@@ -225,15 +236,16 @@
         // 右手: 使用頻度高い子音（ま や ら わ / か さ た な は / 濁音・半濁音）
         // コンボ: X+C = Z
         // J長押し1秒: @
+        // ー長押し200ms: TAB
         // F1/L1 F2/L2 F3/L3 F4/L4 F5                  M  Y  R  W  L/L1
         // A  I  U  E  O  [MB3]     [BSPC]            K  S  T  N  H/L2
-        // X C V Q F J/@  [TAB/L4]                    G  Z  D  B  P/L3
+        // X C V Q F J/@  [ー/TAB]                    G  Z  D  B  P/L3
         // , ESC/Alt LANG2/Ctrl LANG1/Cmd [MB2] [MB1]  [SPACE]  Enter/L2  ./Ctrl+Up
         default_layer {
             bindings = <
 &lt 1 F1                    &lt 2 F2          &lt 3 F3         &lt 4 F4                &kp F5                                                &kp M           &kp Y       &kp R     &kp W            &lt 1 L
 &kp A                       &kp I             &kp U            &kp E                   &kp O             &mkp MB3        &kp BACKSPACE       &kp K           &kp S       &kp T     &kp N            &lt 2 H
-&kp X                       &kp C             &kp V            &kp Q                   &kp F             &j_at AT_SIGN J &lt 4 TAB           &kp G           &kp Z       &kp D     &kp B            &lt 3 P
+&kp X                       &kp C             &kp V            &kp Q                   &kp F             &j_at AT_SIGN J &tab_minus TAB MINUS &kp G          &kp Z       &kp D     &kp B            &lt 3 P
 &kp COMMA                   &mt LEFT_ALT ESC  &mt LCTRL LANG2  &mt LEFT_COMMAND LANG1  &mkp MB2          &mkp MB1        &kp SPACE           &lt 2 ENTER                                        &mt LC(UP) DOT
             >;
 
