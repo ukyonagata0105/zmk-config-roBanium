@@ -38,7 +38,7 @@ layers:
   - {t: ',', h: ^}
   - {t: ⎋, h: ⌥}
   - {t: LANG2, h: ⇧}
-  - LANG1
+  - {t: LANG1, h: ⌘}
   - '&mkp MB2'
   - '&mkp MB1'
   - ␣
