@@ -260,18 +260,18 @@
         // J長押し1秒: @
         // ー長押し200ms: TAB
         // ,長押し200ms: Ctrl
-        // .長押し200ms: ,
+        // .長押し200ms: Ctrl+Up（Mission Control）
         // LANG2長押し200ms: Shift
         // F1/L1 F2/L2 F3/L3 F4/L4 F5                  M  Y  R  W  L/L1
         // A  I  U  E  O  [MB3]     [BSPC]            K  S  T  N  H/L2
         // X C V Q F J/@  [ー/TAB]                    G  Z  D  B  P/L3
-        // ,/Ctrl ESC/Alt LANG2/Shift LANG1 [MB2] [MB1]  [SPACE]  Enter/L2  ./,
+        // ,/Ctrl ESC/Alt LANG2/Shift LANG1 [MB2] [MB1]  [SPACE]  Enter/L2  ./Ctrl+Up
         default_layer {
             bindings = <
 &lt 1 F1                      &lt 2 F2          &lt 3 F3               &lt 4 F4    &kp F5                                                &kp M           &kp Y       &kp R     &kp W            &lt 1 L
 &kp A                         &kp I             &kp U                  &kp E       &kp O             &mkp MB3        &kp BACKSPACE       &kp K           &kp S       &kp T     &kp N            &lt 2 H
 &kp X                         &kp C             &kp V                  &kp Q       &kp F             &j_at AT_SIGN J &tab_minus TAB MINUS &kp G          &kp Z       &kp D     &kp B            &lt 3 P
-&comma_ctrl LCTRL COMMA       &mt LEFT_ALT ESC  &mt LEFT_SHIFT LANG2   &kp LANG1   &mkp MB2          &mkp MB1        &kp SPACE           &lt 2 ENTER                                        &dot_comma COMMA DOT
+&comma_ctrl LCTRL COMMA       &mt LEFT_ALT ESC  &mt LEFT_SHIFT LANG2   &kp LANG1   &mkp MB2          &mkp MB1        &kp SPACE           &lt 2 ENTER                                        &mt LC(UP) DOT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
