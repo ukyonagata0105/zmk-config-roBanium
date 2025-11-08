@@ -43,7 +43,7 @@ layers:
   - '&mkp MB1'
   - ␣
   - {t: ↵, h: '2'}
-  - {t: ., h: ','}
+  - {t: ., h: ^UP}
   '1':
   - {type: held}
   - {t: ▽, type: trans}
